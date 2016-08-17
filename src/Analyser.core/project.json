@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "Microsoft.Extensions.Configuration": "1.0.0",
+    "NETStandard.Library": "1.6.0",
+    "Segmenter.core": "1.0.0-*",
+  },
+  "frameworks" : {
+    "netstandard1.5": {
+      "imports": "dnxcore50"
+    }
+  },
+  "version" : "1.0.0-*"
+}
