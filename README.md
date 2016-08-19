@@ -1,6 +1,22 @@
 # jieba.Net Net Core
 
-DotNet Core版本的jieba.Net. 使用方法请见[jieba.NET](https://github.com/anderscui/jieba.NET)
+Dotnet Core 1.0版本的jieba.Net. 对原有的Segmenter / Segmenter.Cli / Analyser进行了迁移。UnitTes未移植。将``app.config``替换为``config.json``。
+
+Segmenter.cli的部分参数进行了调整, 把command parser替换为dotnet commandline utils。使用示例：
+
+**Windows 10**
+
+```shell
+c:\jieba\>dotnet run -- c:\test.txt
+```
+
+**OSX El Captain**
+
+```shell
+$ dotnet run -- ~/test.txt
+```
+
+关于Jieba库的使用方法请见[jieba.NET](https://github.com/anderscui/jieba.NET)
 
 -----
 jieba.NET是[jieba中文分词](https://github.com/fxsjy/jieba)的.NET版本（C#实现）。
