@@ -133,7 +133,7 @@ namespace JiebaNet.Segmenter.PosSeg
                         // TODO: compare two very small values;
                         // TODO: how to deal with negative infinity
                         if (prob < tranp ||
-                            (prob == tranp && string.Compare(state, y0, StringComparison.InvariantCulture) < 0))
+                            (prob == tranp && string.Compare(state, y0, StringComparison.Ordinal) < 0))
                         {
                             prob = tranp;
                             state = y0;
@@ -152,7 +152,7 @@ namespace JiebaNet.Segmenter.PosSeg
             {
                 // TODO: compare two very small values;
                 if (endProb < endPoint.Prob || 
-                    (endProb == endPoint.Prob && String.Compare(endState, endPoint.State, StringComparison.InvariantCulture) < 0))
+                    (endProb == endPoint.Prob && String.Compare(endState, endPoint.State, StringComparison.Ordinal) < 0))
                 {
                     endProb = endPoint.Prob;
                     endState = endPoint.State;

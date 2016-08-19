@@ -40,15 +40,10 @@ namespace JiebaNet.Segmenter
                 var stopWatch = new Stopwatch();
                 stopWatch.Start();
 
-                Stream st = new MemoryStream(MainDict.Length);
-                StreamWriter stw = new StreamWriter(st) { AutoFlush = true };
-                stw.Write(MainDict);
-                st.Position = 0;
-
-                using (var sr = new StreamReader(st, Encoding.UTF8))
+                using (var reader = File.OpenText(MainDict))
                 {
                     string line = null;
-                    while ((line = sr.ReadLine()) != null)
+                    while ((line = reader.ReadLine()) != null)
                     {
                         var tokens = line.Split(' ');
                         if (tokens.Length < 2)

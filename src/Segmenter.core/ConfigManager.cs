@@ -10,10 +10,11 @@ namespace JiebaNet.Segmenter
             get
             {
                 var config = new ConfigurationBuilder()
-                                .AddXmlFile("app.config")
+                                .AddJsonFile("config.json") 
                                 .Build();
-                return config["JiebaConfigFileDir"] ?? "Resource";
-                //return ConfigurationManager.AppSettings["JiebaConfigFileDir"] ?? "Resources";
+                var resFolder = config["JiebaConfigFileDir"] ?? "Resources";
+                var path = Path.Combine($"{Directory.GetCurrentDirectory()}", resFolder);
+                return path;
             }
         }
 

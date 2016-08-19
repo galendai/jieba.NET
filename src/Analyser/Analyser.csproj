@@ -49,12 +49,6 @@
     <Compile Include="UndirectWeightedGraph.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Segmenter\Segmenter.csproj">
-      <Project>{7930A2C1-15B4-4EAB-9CD4-4B709A3FD76E}</Project>
-      <Name>Segmenter</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Resources\idf.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

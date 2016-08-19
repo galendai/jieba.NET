@@ -11,10 +11,11 @@ namespace JiebaNet.Analyser
             get
             {
                 var config = new ConfigurationBuilder()
-                                .AddXmlFile("app.config")
+                                .AddJsonFile("config.json")
                                 .Build();
-                return config["JiebaConfigFileDir"] ?? "Resources";
-                //return ConfigurationManager.AppSettings["JiebaConfigFileDir"] ?? "Resources";
+                var resFolder = config["JeibaConfigFileDir"] ?? "Resources";
+                var path = Path.Combine($"{Directory.GetCurrentDirectory()}", resFolder);
+                return path; 
             }
         }
 

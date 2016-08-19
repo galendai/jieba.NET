@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true,
+    "copyToOutput": {
+      "includeFiles": [
+        "./config.json",
+        "./Resources/char_state_tab.json",
+        "./Resources/dict.txt",
+        "./Resources/pos_prob_emit.json",
+        "./Resources/pos_prob_start.json",
+        "./Resources/pos_prob_trans.json",
+        "./Resources/prob_emit.json",
+        "./Resources/prob_trans.json"
+      ]
+    } 
+  },
+  "dependencies": {
+    "Analyser.core": "1.0.0-*",
+    "Segmenter.core": "1.0.0-*",
+    "Microsoft.Extensions.CommandLineUtils": "1.0.0"    
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.0.0-rc2-3002702"
+        }
+      },
+      "imports": "dnxcore50"
+    }
+  },
+  "publishOptions": {
+    "includeFiles": [
+      "./config.json",
+      "./Resources/char_state_tab.json",
+      "./Resources/dict.txt",
+      "./Resources/pos_prob_emit.json",
+      "./Resources/pos_prob_start.json",
+      "./Resources/pos_prob_trans.json",
+      "./Resources/prob_emit.json",
+      "./Resources/prob_trans.json"
+    ]
+  }
+}
